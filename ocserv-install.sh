@@ -12,7 +12,7 @@ mkdir certificates
 cd certificates
 
 cat << EOF > ca.tmpl
-cn = "Elsewhere CA"
+cn = "Elsewhere"
 organization = "Elsewhere"
 serial = 1
 expiration_days = 3650
