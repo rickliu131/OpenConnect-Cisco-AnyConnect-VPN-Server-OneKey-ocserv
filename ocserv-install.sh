@@ -12,8 +12,8 @@ mkdir certificates
 cd certificates
 
 cat << EOF > ca.tmpl
-cn = "VPN CA"
-organization = "Big Corp"
+cn = "Elsewhere CA"
+organization = "Elsewhere"
 serial = 1
 expiration_days = 3650
 ca
@@ -28,7 +28,7 @@ certtool --generate-self-signed --load-privkey ca-key.pem --template ca.tmpl --o
 cat << EOF > server.tmpl
 #yourIP
 cn=$ip
-organization = "my company"
+organization = "Elsewhere"
 expiration_days = 3650
 signing_key
 encryption_key
